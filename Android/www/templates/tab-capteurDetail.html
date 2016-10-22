@@ -1,0 +1,29 @@
+<ion-view view-title="{{capteur.name}}">
+	<ion-content class="padding">
+		<div class="capteurDetail">
+		<div id="commandesTemperatures">
+				<button class="button button-positive command-temp-moins" ng-click="decrementCommande()">-</button>
+				<div>
+					<h2>{{capteur.temp}}°C</h2>
+					<h4>{{capteur.commande}}°C</h4>
+				</div>
+				<button class="button button-positive command-temp-plus" ng-click="incrementCommande()">+</button>
+			</div>
+
+			<br/><br/><br/>
+
+			<div id="infosComplementaires">
+				<label class="item item-input">
+					<span class="input-label">Nom</span>
+					<input type="text" ng-model="capteur.name" ng-change="setName()">
+				</label>
+				<ion-toggle ng-model="capteur.favori" ng-click="setFavori()">Favori</ion-toggle>
+			</div>
+
+			<br/><br/><br/><br/>
+
+			<button class="button button-assertive button-outline" ng-click="removeCapteur()">Supprimer le capteur</button>
+		</div>
+
+	</ion-content>
+</ion-view>

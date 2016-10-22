@@ -1,0 +1,14 @@
+<ion-view view-title="Favoris">
+    <ion-content class="padding">
+
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()"></ion-refresher>
+
+        <div class="row favorisDisplay">
+            <div class="col col-50 favorisLink" ng-repeat="capteur in favoris">
+                <h3>{{capteur.temp}}</h3>
+                <h6>{{capteur.name}}</h6>
+            </div>
+        </div>
+        
+    </ion-content>
+</ion-view>

@@ -1,0 +1,33 @@
+.favorisDisplay{
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.favorisLink{
+	text-align: center;
+	max-height: 150px; 
+}
+.favorisLink h3{
+	font-size: 50px;
+}
+
+.capteurDetail{
+	text-align: center;
+	padding-top: 30px;
+}
+.capteurDetail h2{
+	font-size: 60px;
+}
+.capteurDetail .command-temp-plus{
+	position: absolute;
+	top: 70px;
+	right: 0px;
+}
+.capteurDetail .command-temp-moins{
+	position: absolute;
+	top: 70px;
+	left: 0px;
+}
+
+ion-header-bar{
+	background-color: #222222;
+}
