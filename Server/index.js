@@ -8,7 +8,7 @@ capteurs.push({id:0, name: "Salon", commande: 20, temp: 18, favori: true});
 capteurs.push({id:1, name: "Chambre1", commande: 30, temp: 21, favori: true});
 capteurs.push({id:2, name: "Chambre2", commande: 30, temp: 21, favori: false});
 capteurs.push({id:3, name: "Chambre3", commande: 30, temp: 21, favori: false});
-
+var id = 4;
 
 // Ajout de headers pour autoriser l'accès à l'API par une application externe
 app.use(function (req, res, next) {
@@ -121,7 +121,8 @@ app.get('/remove', function(req, res){
 
 // Ajoute un capteur dont le nom est passé en paramètre
 app.get('/addCapteur', function(req, res){
-	capteurs.push({id:capteurs.length, name: req.query.name, commande: 20, temp: 18, favori: false});
+	capteurs.push({id: id, name: req.query.name, commande: 20, temp: 18, favori: false});
+	id++;
 })
 
 
