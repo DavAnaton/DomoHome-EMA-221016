@@ -1,6 +1,6 @@
 var express = require('express'),
 app = express(),
-_PORT_ = 8080,
+_PORT_ = process.env.PORT || 8080,
 capteurs = [];
 
 //Capteurs initiaux
