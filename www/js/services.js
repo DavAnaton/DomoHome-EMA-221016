@@ -1,7 +1,7 @@
 angular.module('starter.services', [])
 
 .factory('Capteurs', function($http, $rootScope) {
-    if(!$rootScope.apiAddress) $rootScope.apiAddress = "127.0.0.1:8080";
+    if(!$rootScope.apiAddress) $rootScope.apiAddress = process.env.SERVER_API || "https://domohome-server.herokuapp.com/";
 
     return {
         getFavoris: function(callback){
